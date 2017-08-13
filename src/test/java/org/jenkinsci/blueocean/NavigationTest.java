@@ -31,7 +31,7 @@ public class NavigationTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testNavigation()
     {
         assertTrue( "Navigating to: North".equals(new Navigation().navigate("North")));
     }
