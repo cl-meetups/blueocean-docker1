@@ -18,12 +18,7 @@ pipeline {
     }
     stage('Chat') {
       steps {
-        hubotSend(room: 'Jenkins', message: 'Terminei a Job', url: 'http://localhost:3001/')
-      }
-    }
-    stage('DockerVersion') {
-      steps {
-        sh 'docker version'
+        hubotSend(room: 'jenkins', message: 'Terminei a Job', url: 'http://localhost:3001/')
       }
     }
   }
