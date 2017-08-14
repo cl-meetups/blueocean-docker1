@@ -21,7 +21,7 @@ pipeline {
         hubotSend(room: 'Jenkins', message: 'Terminei a Job', url: 'http://localhost:3001/')
       }
     }
-    stage('') {
+    stage('DockerVersion') {
       steps {
         sh 'docker version'
       }
