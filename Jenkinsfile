@@ -16,9 +16,10 @@ pipeline {
         sh 'mvn clean install'
       }
     }
-    stage('Chat') {
+    stage('ChatOps') {
       steps {
         hubotSend(room: 'jenkins', message: 'Terminei a Job', url: 'http://localhost:3001/')
+        hubotApprove(room: 'jenkins', url: 'http://localhost:3001', message: 'Deseja confirmar?')
       }
     }
   }
