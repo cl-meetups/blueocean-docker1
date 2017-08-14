@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    dockerfile {
-      filename 'Dockerfile'
+    docker {
+      image 'maven:3.5-jdk-8-alpine'
     }
     
   }
@@ -19,6 +19,11 @@ pipeline {
     stage('Chat') {
       steps {
         hubotSend(room: 'Jenkins', message: 'Terminei a Job', url: 'http://localhost:3001/')
+      }
+    }
+    stage('') {
+      steps {
+        sh 'docker version'
       }
     }
   }
